@@ -41,10 +41,11 @@
                 <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
               </ul>
             </li>
+            <%= link_to 'Создать анкету', new_report_path, class: 'btn btn-success navbar-btn' %>
           </ul>
         <% else %>
           <%= link_to 'Зарегестрироваться', new_user_registration_path, class: 'btn btn-warning navbar-btn' %>
-          <%= link_to 'Войти', new_user_session_path, class: 'btn btn-primary navbar-btn' %>
+          <%= link_to 'Войти', new_user_session_path, class: 'btn btn-primary navbar-btn' %> 
         <% end %>
       </ul>
     </div>
