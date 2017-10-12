@@ -1,6 +1,6 @@
 <div class="container conta-style">
 	<%= simple_form_for @info, :url =>  report_index_path, :method => :post do |f| %>
-	<%= f.input :type_education %>
+	<%= f.input :type_education, collection: ["Бакалавр", "Магистр"] %>
 	<%= f.input :sex, collection: ["Мужчина", "Женщина"] %>
 	<%= f.input :date_of_birth %>
 	<%= f.input :born_place, collection: ["Россия", "Казахстан", "Кыргызстан"] %>
@@ -10,6 +10,8 @@
 	<%= f.input :given_date %>
 	<%= f.input :place_given_document %>
 	<%= f.input :phone_number %>
+	<%= f.input :ort, as: :file%>
+	<%= f.input :passport, as: :file%>
 	<%= f.hidden_field :user_id %> 
 	<%= f.button :submit, 'Потвердить', class: 'btn btn-success btn-l' %>
 	<% end %>

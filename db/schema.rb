@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012195739) do
+ActiveRecord::Schema.define(version: 20171012223552) do
 
   create_table "infostuds", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20171012195739) do
     t.string "place_given_document"
     t.string "phone_number"
     t.integer "user_id"
+    t.string "ort_file_name"
+    t.string "ort_content_type"
+    t.integer "ort_file_size"
+    t.datetime "ort_updated_at"
+    t.string "passport_file_name"
+    t.string "passport_content_type"
+    t.integer "passport_file_size"
+    t.datetime "passport_updated_at"
     t.index ["user_id"], name: "index_infostuds_on_user_id"
   end
 

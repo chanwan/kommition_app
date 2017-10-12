@@ -1,4 +1,6 @@
 class ReportController < ApplicationController
+
+	before_action :authenticate_user!
 	def index
 	end
 
@@ -20,6 +22,6 @@ class ReportController < ApplicationController
 
 		params.require(:infostud).permit(:type_education, :sex, :date_of_birth, :born_place, 
 			:type_document, :another_name_document, :serial_number_document, :given_date,:place_given_document,
-			:phone_number, :user_id)
+			:phone_number, :ort, :passport,:user_id)
 	end
 end
