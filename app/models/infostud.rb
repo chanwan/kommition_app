@@ -1,0 +1,2 @@
+class Infostud < ApplicationRecord
+end

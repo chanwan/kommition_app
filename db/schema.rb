@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012160711) do
+ActiveRecord::Schema.define(version: 20171012195739) do
+
+  create_table "infostuds", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "type_education"
+    t.string "sex"
+    t.string "date_of_birth"
+    t.string "born_place"
+    t.string "type_document"
+    t.string "another_name_document"
+    t.string "serial_number_document"
+    t.string "given_date"
+    t.string "place_given_document"
+    t.string "phone_number"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_infostuds_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,22 +42,9 @@ ActiveRecord::Schema.define(version: 20171012160711) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "type_education"
-    t.string "country"
-    t.string "last_name"
-    t.string "first_name"
-    t.string "sur_name"
     t.string "name"
-    t.string "sex"
-    t.string "date_of_birth"
-    t.string "born_place"
-    t.string "type_document"
-    t.string "another_name_document"
-    t.string "serial_number_document"
-    t.string "number_document"
-    t.string "given_date"
-    t.string "place_given_document"
-    t.string "phone_number"
+    t.string "surname"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
