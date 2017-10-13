@@ -1,0 +1,38 @@
+<div class="container cont-t">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Форма обучение</th>
+				<th>Пол</th>
+				<th>Дата рождение</th>
+				<th>Место рождение</th>
+				<th>Тип документа</th>
+				<th>Другой тип документа</th>
+				<th>Серийный номер</th>
+				<th>Дата выдачи документа</th>
+				<th>Место выдачи документа</th>
+				<th>Номерсотового сетефона</th>
+				<th>Фото ОРТ</th>
+				<th>Фото Докумуента</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td><%= @info.type_education %></td>
+				<td><%= @info.sex%></td>
+				<td><%= @info.date_of_birth %></td>
+				<td><%= @info.born_place %></td>
+				<td><%= @info.type_document %></td>
+				<td><%= @info.serial_number_document %></td>
+				<td><%= @info.given_date %></td>
+				<td><%= @info.place_given_document %></td>
+				<td><%= @info.phone_number %></td>
+				<td><%= @info.given_date %></td>
+				<td><%= image_tag @info.ort(:thumb) %></td>
+				<td><%= image_tag @info.passport(:thumb) %></td>
+		</tbody>
+	</table>
+</div>

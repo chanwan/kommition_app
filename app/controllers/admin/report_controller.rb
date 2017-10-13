@@ -1,9 +1,15 @@
-class ReportController < ApplicationController
+class Admin::ReportController < ApplicationController
 
+layout 'admin'
 	before_action :authenticate_user!
-
 	def index
+		@infos = Infostud.all
 	end
+
+	def show
+		@info = Infostud.find(params[:id])
+	end
+
 
 	def new 
 		@info = current_user.infostuds.build
@@ -25,4 +31,5 @@ class ReportController < ApplicationController
 			:type_document, :another_name_document, :serial_number_document, :given_date,:place_given_document,
 			:phone_number, :ort, :passport,:user_id)
 	end
+
 end
